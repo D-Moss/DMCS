@@ -26,7 +26,7 @@ body {
 .logo {
 	margin-bottom: 1.5rem;
 	height: auto;
-	max-width: 160px;
+	max-width: 180px;
 }
 
 .hero h1 {
@@ -69,8 +69,14 @@ body {
 }
 
 @media (max-width: 480px) {
+	.hero-container {
+		max-width: 250px;
+	}
+	.logo {
+		width: 75px;
+	}
 	.hero h1 {
-		font-size: 1.6rem;
+		font-size: .95rem;
 	}
 	.hero p {
 		font-size: 0.95rem;
@@ -134,6 +140,25 @@ body {
 	}
 	.about-text {
 		flex: 1;
+	}
+}
+
+@media (max-width: 480px) {
+	.about {
+		padding: 1.25rem .5px;
+	}
+	.about-container {
+		text-align: justify;
+		max-width: 250px;
+	}
+	.about-text h2 {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	.about-text p {
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+		font-size: .8rem;
 	}
 }
 
@@ -235,20 +260,63 @@ body {
 
 .card-links a {
 	margin-right: 1rem;
-	color: #5c4d4d;
+	padding: 1rem;
+	background-color: #00876a;
+	color: #ffffff;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: bold;
+	border-radius: 6px;
 	display: inline-block;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .card-links a:hover {
-	color: #00a94f;
+	background-color: #176b6d;
 	text-decoration: underline;
+	transform: translateY(-2px);
 }
 
 .viator-banner-wrapper {
 	margin-top: 2rem;
 	text-align: center;
+}
+
+@media (max-width: 480px) {
+	.portfolio {
+		padding: 1rem .75rem;
+	}
+	.portfolio-container {
+		max-width: 250px;
+	}
+	.portfolio h2 {
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+	.portfolio-container p {
+		margin-bottom: .2rem;
+		font-size: .7rem;
+	}
+	.portfolio-grid {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+	.portfolio-card {
+		padding: 1rem;
+	}
+	.portfolio-card h3 {
+		font-size: .95rem;
+	}
+	.portfolio-card p {
+		font-size: .8rem;
+	}
+	.card-links a {
+		padding: .5rem .3rem;
+	}
+	.card-links a:hover {
+		background-color: #176b6d;
+		text-decoration: underline;
+		transform: translateY(-2px);
+	}
 }
 
 /*CREATIVE SERVICES*/
@@ -322,9 +390,19 @@ body {
 }
 
 @media (max-width: 768px) {
+	.pricing-container {
+		max-width: 100%;
+		padding: 0 .75rem;
+	}
 	.pricing-row {
 		flex-direction: column;
 		align-items: center;
+		gap: 1.5rem;
+	}
+	.pricing-column {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 500px;
 	}
 }
 
@@ -390,6 +468,21 @@ body {
 }
 
 @media (max-width: 480px) {
+	.contact {
+		padding: 2rem .75rem;
+	}
+	.contact-container {
+		margin: auto;
+		max-width: 275px;
+	}
+	.contact-container h2 {
+		font-size: 1rem;
+	}
+	.contact-form input,
+	.contact-form textarea {
+		padding: 0.5rem;
+		font-size: 0.75rem;
+	}
 	.contact-social a {
 		margin: 0.5rem 0;
 		display: block;
@@ -415,23 +508,6 @@ body {
 	border-radius: 8px;
 }
 
-.footer-message {
-	margin-bottom: 1rem;
-	font-style: italic;
-}
-
-.footer-links a {
-	margin: 0 0.75rem;
-	color: #ddd;
-	text-decoration: none;
-	font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-	color: #00a94f;
-	text-decoration: underline;
-}
-
 .footer-copy {
 	margin-top: 1.5rem;
 	color: #fff;
@@ -439,8 +515,10 @@ body {
 }
 
 @media (max-width: 480px) {
-	.footer-links a {
-		margin: 0.5rem 0;
-		display: block;
+	.footer-logo {
+		width: 75px;
+	}
+	.footer-copy {
+		font-size: .7rem;
 	}
 }
