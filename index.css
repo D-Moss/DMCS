@@ -19,16 +19,16 @@ body {
 	--color-dm: #1c2a4d;
 	--color-creative: #e76daa;
 	--color-solutions: #a6a6a6;
-	--color-darkpink: #e7b6d2;
+	--color-lightpink: #e7b6d2;
 	--color-mediumpink: #e88fb6;
-	--color-lightpink: #d96aa0;
+	--color-darkpink: #d96aa0;
 }
 
 
 /*HERO SECTION*/
 .hero {
 	padding: 0.5rem 2rem;
-	background: radial-gradient(circle at center, #ffffff 0%, #f4f4f4 50%, #fadadd 100%);
+	background: radial-gradient(circle, #ffffff 0%, #f4f4f4 35%, #fadadd 100%);
 	text-align: center;
 	/*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
 }
@@ -55,6 +55,7 @@ body {
 }
 
 .cta-button {
+	margin-bottom: 2.5rem;
 	padding: 0.75rem 1.5rem;
 	background-color: var(--color-blush);
 	color: var(--color-navy);
@@ -102,5 +103,85 @@ body {
 	.cta-button {
 		padding: 0.6rem 1.2rem;
 		font-size: 0.9rem;
+	}
+}
+
+/*ABOUT ME*/
+.about {
+	padding: 4rem 2rem;
+}
+
+.about-container {
+	margin: auto;
+	background-color: var(--color-blush);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+}
+
+.about-image {
+	margin: 1.5rem auto 1.5rem auto;
+	border-radius: 8px;
+	display: block;
+	width: 180px;
+}
+
+.about-text h2 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+}
+
+.about-text h2::after {
+	margin: 1rem auto;
+	background-color: var(--color-creative);
+	display: block;
+	width: 60px;
+	height: 3px;
+	content: '';
+}
+
+.about-text p {
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	max-width: 800px;
+}
+
+@media screen (min-width: 768px) {
+	.about-container {
+		text-align: left;
+		flex-direction: row;
+		gap: 3rem;
+	}
+	.about-image {
+		margin-bottom: 0;
+		width: 200px;
+	}
+	.about-text {
+		flex: 1;
+	}
+}
+
+@media (max-width: 480px) {
+	.about {
+		padding: 1.25rem .5px;
+	}
+	.about-container {
+		text-align: justify;
+		max-width: 250px;
+	}
+	.about-text h2 {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	.about-text p {
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+		font-size: .8rem;
 	}
 }
