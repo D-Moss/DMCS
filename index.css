@@ -63,7 +63,6 @@ body {
 	font-weight: 600;
 	border: none;
 	border-radius: 6px;
-	/*border: 3.5px solid #004c54;*/
 	display: inline-block;
 	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -72,7 +71,6 @@ body {
 	background-color: var(--color-creative);
 	color: var(--color-white);
 	box-shadow: 0 4px 12px rgba(231, 109, 170, 0.3);
-	/*box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);*/
 }
 
 @media (max-width: 768px) {
@@ -184,4 +182,89 @@ body {
 		padding: 0 1rem;
 		font-size: .8rem;
 	}
+}
+
+/*PORTFOLIO HIGHLIGHT*/
+.portfolio-showcase {
+	padding: 4rem 2rem;
+	background-color: var(--color-white);
+	text-align: center;
+	width: 100%;
+}
+
+.portfolio-container h2 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	font-family: 'Playfair Display', serif;
+}
+
+.portfolio-container p {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	max-width: 800px;
+}
+
+.portfolio-grid {
+	margin-bottom: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+}
+
+.portfolio-card {
+	padding: 1rem;
+	background-color: var(--color-gray);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	height: 100%;
+}
+
+.portfolio-card img {
+	margin-bottom: 1rem;
+	border-radius: 6px;
+	object-fit: cover;
+	height: auto;
+	width: 100%;
+	max-width: 500px;
+}
+
+.portfolio-card h3 {
+	margin-bottom: 0.5rem;
+	color: var(--color-creative);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.portfolio-card p {
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 1rem;
+	font-style: italic;
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.6;
+}
+
+.review-link {
+	margin-top: auto;
+	padding: 0.5rem 1rem;
+	background-color: var(--color-blush);
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+	/*position: absolute;
+	bottom: -920px;
+	left: 50%;
+	transform: translateX(-50%);*/
+	
+}
+
+.review-link:hover {
+	background-color: var(--color-creative);
+	color: var(--color-white);
 }
