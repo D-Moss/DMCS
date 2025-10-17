@@ -1,19 +1,22 @@
-const triggers = document.querySelectorAll('.lightbox-trigger');
-const overlay = document.createElement('div');
-overlay.className = 'lightbox-overlay';
-document.body.appendChild(overlay);
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-button.prev');
+const nextBtn = document.querySelector('.carousel-button.next');
+let currentIndex = 0;
 
-triggers.forEach(trigger => {
-	trigger.addEventListener('click', function(e) {
-		e.preventDefault();
-		const img = document.createElement('img');
-		img.src = this.href;
-		overlay.innerHTML = '';
-		overlay.appendChild(img);
-		overlay.style.display = 'flex';
-	});
+const cardWidth = 500 + 32; // card + gap
+const totalCards = document.querySelectorAll('.experience-card').length;
+const maxIndex = Math.ceil(totalCards / 2) - 1;
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
 });
 
-overlay.addEventListener('click', function() {
-	overlay.style.display = 'none';
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
 });

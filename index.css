@@ -23,6 +23,7 @@ body {
 	--color-lightpink: #e7b6d2;
 	--color-mediumpink: #e88fb6;
 	--color-darkpink: #d96aa0;
+	--card-width: 500px;
 }
 
 
@@ -257,12 +258,7 @@ body {
 	text-decoration: none;
 	font-weight: 600;
 	border-radius: 4px;
-	transition: background-color 0.3s ease;
-	/*position: absolute;
-	bottom: -920px;
-	left: 50%;
-	transform: translateX(-50%);*/
-	
+	transition: background-color 0.3s ease;	
 }
 
 .review-link:hover {
@@ -336,4 +332,156 @@ body {
 	font-weight: 600;
 	border-radius: 4px;
 	transition: background-color 0.3s ease;
+}
+
+/*BOOKABLE SERVICES*/
+.bookable-carousel {
+	padding: 4rem 2rem;
+	background-color: var(--color-white);
+	text-align: center;
+}
+
+.bookable-carousel h2 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	font-family: 'Playfair Display', serif;
+}
+
+.bookable-carousel .subtitle {
+	margin: 0 auto 2rem;
+	font-size: 1.2rem;
+	max-width: 800px;
+}
+
+.carousel-wrapper {
+	margin: 0 auto;
+	/*padding-top: 1.25rem;
+	padding-left: 2rem;*/
+	padding: 2rem 3rem;
+	position: relative;
+	overflow: hidden;
+	max-width: 1080px;
+}
+
+.carousel-track {
+	display: flex;
+	gap: 2rem;
+	transition: transform 0.5s ease;
+	width: calc(2 * 480px + 2rem);
+}
+
+.experience-card {
+	padding: 2rem;
+	background-color: var(--color-gray);
+	text-align: left;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 650px;
+	min-width: 489.4px;
+	max-width: 480px;
+}
+
+.experience-card img {
+	margin-bottom: 1rem;
+	border-radius: 6px;
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	min-height: 200px;
+}
+
+.tag-group {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.tag {
+	margin-right: 0.5rem;
+	padding: 0.3rem 0.6rem;
+	background-color: var(--color-blush);
+	font-size: 0.85rem;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.card-links {
+	margin-top: auto;
+	padding-top: 1rem;
+}
+
+.card-links a {
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: var(--color-creative);
+	color: var(--color-white);
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 4px;
+	display: inline-block;
+	transition: background-color 0.5s ease;
+}
+
+.card-links a:hover {
+	background-color: var(--color-navy);
+}
+
+.carousel-button {
+	padding: 0.5rem 1rem;
+	background-color: var(--color-blush);
+	color: var(--color-navy);
+	font-size: 2rem;
+	border-radius: 50%;
+	border: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 2;
+}
+
+.carousel-button.prev {
+	left: 1rem;
+}
+
+.carousel-buffer {
+	min-width: 3rem;
+	flex-shrink: 0;
+}
+
+.carousel-button.next {
+	right: 1rem;
+	transform: translateY(-50%);
+}
+
+.archive-link {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.archive-link a {
+	padding: 0.5rem 1rem;
+	color: var(--color-creative);
+	text-decoration: none;
+	font-weight: 600;
+	border: 2px solid var(--color-creative);
+	border-radius: 4px;
+	transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.archive-link a:hover {
+	background-color: var(--color-creative);
+	color: var(--color-white);
+}
+
+.disabled-link {
+	pointer-events: none;
+	opacity: 0.6;
+	cursor: not-allowed;
 }
