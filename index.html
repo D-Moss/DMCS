@@ -228,16 +228,21 @@
 	<section class="contact" id="contact">
 		<div class="contact-container">
 			<h2>Let’s Build Something Beautiful Together</h2>
-			<form class="contact-form">
-				<input type="text" name="name" placeholder="Your Name" required>
-				<input type="email" name="email" placeholder="Your Email" required>
-				<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+			<form class="contact-form" action="#" method="POST">
+				<label for="name">Your Name</label>
+				<input type="text" id="name" name="name" placeholder="Your Name" required>
+				<label for="email">Your Email</label>
+				<input type="email" id="email" name="email" placeholder="Your Email" required>
+				<label for="message">Your Message</label>
+				<textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 				<button type="submit">Send Message</button>
 			</form>
+			<p class="form-success" style="display: none;">Thanks for reaching out! I’ll be in touch soon.</p>
 			<div class="contact-social">
-				<a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-				<a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a>
-				<a href="https://www.google.com/maps/contrib/yourprofile" target="_blank">Google Reviews</a>
+				<a href="https://www.linkedin.com/in/dionamoss" target="_blank">LinkedIn</a>
+				<a href="https://www.instagram.com/dionamoss" target="_blank">Instagram</a>
+				<a href="https://www.google.com/maps/contrib/117907542954147717796/reviews/" target="_blank" aria-label="Read my Google reviews">Google Reviews</a>
+				<span class="review-note">Posted from my personal account, curated by DM Creative Solutions.</span>
 			</div>
 			<p class="contact-note">Thanks for stopping by—see you out there.</p>
 		</div>
