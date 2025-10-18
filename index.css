@@ -380,8 +380,8 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 650px;
-	min-width: 489.4px;
-	max-width: 480px;
+	min-width: 480px;
+	max-width: 580px;
 }
 
 .experience-card img {
