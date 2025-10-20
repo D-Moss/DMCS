@@ -3,14 +3,21 @@ const prevBtn = document.querySelector('.carousel-button.prev');
 const nextBtn = document.querySelector('.carousel-button.next');
 let currentIndex = 0;
 
-const cardWidth = 500 + 32; // card + gap
+const cardWidth = 480 + 32; // card + gap
 const totalCards = document.querySelectorAll('.experience-card').length;
-const maxIndex = Math.ceil(totalCards / 2) - 1;
+const maxIndex = totalCards - 2; // 4 - 2 = 2
 
 nextBtn.addEventListener('click', () => {
 	if (currentIndex < maxIndex) {
 		currentIndex++;
 		track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+		// Disable next button if we've reached the end
+		if (currentIndex === maxIndex) {
+			nextBtn.disabled = true;
+			nextBtn.style.opacity = 0.5;
+			nextBtn.style.cursor = 'not-allowed';
+		}
 	}
 });
 
@@ -18,6 +25,11 @@ prevBtn.addEventListener('click', () => {
 	if (currentIndex > 0) {
 		currentIndex--;
 		track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+		// Re-enable next button when moving back
+		nextBtn.disabled = false;
+		nextBtn.style.opacity = 1;
+		nextBtn.style.cursor = 'pointer';
 	}
 });
 

@@ -368,7 +368,7 @@ body {
 	display: flex;
 	gap: 2rem;
 	transition: transform 0.5s ease;
-	width: calc(2 * 480px + 2rem);
+	width: calc(4 * 480px + 2rem);
 }
 
 .experience-card {
@@ -381,7 +381,7 @@ body {
 	justify-content: space-between;
 	height: 650px;
 	min-width: 480px;
-	max-width: 580px;
+	max-width: 480px;
 }
 
 .experience-card img {
