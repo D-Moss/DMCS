@@ -27,7 +27,6 @@ body {
 	--card-width: 500px;
 }
 
-
 /*HERO SECTION*/
 .hero {
 	padding: 0.5rem 2rem;
@@ -77,6 +76,9 @@ body {
 }
 
 @media (max-width: 768px) {
+	.hero {
+		padding: 2rem 1rem;
+	}
 	.hero h1 {
 		font-size: 2rem;
 	}
@@ -84,26 +86,31 @@ body {
 		font-size: 1rem;
 	}
 	.logo {
-		width: 100px;
+		max-width: 140px;
+	}
+	.cta-button {
+		padding: 0.6rem 1.2rem;
+		font-size: .95rem;
 	}
 }
 
 @media (max-width: 480px) {
-	.hero-container {
+	/*.hero-container {
 		max-width: 250px;
 	}
 	.logo {
 		width: 75px;
-	}
+	}*/
 	.hero h1 {
-		font-size: .95rem;
+		font-size: 1.6rem;
 	}
 	.hero p {
 		font-size: 0.95rem;
 	}
 	.cta-button {
-		padding: 0.6rem 1.2rem;
-		font-size: 0.9rem;
+		/*padding: 0.6rem 1.2rem;*/
+		font-size: 1rem;
+		width: 100%;
 	}
 }
 
@@ -153,37 +160,50 @@ body {
 	max-width: 800px;
 }
 
-@media screen (min-width: 768px) {
+@media (max-width: 768px) {
+	.about {
+		padding: 3rem 1.5rem;
+	}
 	.about-container {
-		text-align: left;
-		flex-direction: row;
-		gap: 3rem;
+		padding: 1rem;
+		flex-direction: column;
+		/*gap: 3rem;*/
 	}
 	.about-image {
-		margin-bottom: 0;
-		width: 200px;
+		margin: 1rem auto;
+		width: 140px;
 	}
-	.about-text {
-		flex: 1;
+	.about-text h2 {
+		font-size: 1.8rem;
+	}
+	.about-text p {
+		padding: 0 1rem;
+		text-align: left;
+		font-size: 1rem;
+		line-height: 1.5;
 	}
 }
 
 @media (max-width: 480px) {
 	.about {
-		padding: 1.25rem .5px;
+		padding: 2rem 1px;
 	}
-	.about-container {
+	/*.about-container {
 		text-align: justify;
 		max-width: 250px;
+	}*/
+	.about-image {
+		width: 120px;
 	}
 	.about-text h2 {
-		text-align: center;
-		font-size: 1.5rem;
+		/*text-align: center;*/
+		font-size: 1.6rem;
 	}
 	.about-text p {
-		margin-bottom: 1rem;
-		padding: 0 1rem;
-		font-size: .8rem;
+		/*margin-bottom: 1rem;
+		padding: 0 1rem;*/
+		text-align: left;
+		font-size: .95rem;
 	}
 }
 
@@ -267,6 +287,59 @@ body {
 	color: var(--color-white);
 }
 
+@media (max-width: 768px) {
+	.portfolio-showcase {
+		padding: 3rem 1.5rem;
+	}
+	.portfolio-container h2 {
+		font-size: 1.8rem;
+	}
+	.portfolio-container p {
+		padding: 0 1rem;
+		font-size: 1rem;
+	}
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+	.portfolio-card {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	.portfolio-card img {
+		max-width: 100%;
+	}
+	.portfolio-card p {
+		padding: 0 1rem;
+		font-size: 0.95rem;
+	}
+	.review-link {
+		padding: 0.5rem 1rem;
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.portfolio-showcase {
+		padding: 2rem 1rem;
+	}
+	.portfolio-container h2 {
+		font-size: 1.6rem;
+	}
+	.portfolio-container p {
+		font-size: 0.95rem;
+	}
+	.portfolio-card h3 {
+		font-size: 1.1rem;
+	}
+	.portfolio-card p {
+		font-size: 0.9rem;
+	}
+	.review-link {
+		text-align: center;
+		width: 100%;
+	}
+}
+
 /*CREATIVE SERVICES*/
 .creative-services {
 	padding: 4rem 2rem;
@@ -333,6 +406,73 @@ body {
 	font-weight: 600;
 	border-radius: 4px;
 	transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.creative-services {
+		padding: 3rem 1.5rem;
+	}
+	.services-container {
+		padding: 2rem 1rem;
+	}
+	.services-container h2 {
+		font-size: 1.8rem;
+	}
+	.subtitle {
+		padding: 0 1rem;
+		font-size: 1rem;
+	}
+	.services-grid {
+		justify-content: center;
+		grid-template-columns: 1fr;
+	}
+	.service-card {
+		margin: 0 auto;
+		padding: 1.5rem;
+		text-align: center;
+		max-width: 600px;
+		width: 100%;
+	}
+	.service-card h3 {
+		font-size: 1.2rem;
+	}
+	.service-card p.price {
+		font-size: 1rem;
+	}
+	.service-card ul li {
+		font-size: 0.95rem;
+	}
+	.service-button {
+		padding: 0.5rem 1rem;
+		text-align: center;
+		font-size: 0.95rem;
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.creative-services {
+		padding: 2rem 1rem;
+	}
+	.services-container h2 {
+		font-size: 1.6rem;
+	}
+	.subtitle {
+		font-size: 0.95rem;
+	}
+	.service-card h3 {
+		font-size: 1.1rem;
+	}
+	.service-card p.price {
+		font-size: 0.95rem;
+	}
+	.service-card ul li {
+		font-size: 0.9rem;
+	}
+	.service-button {
+		font-size: 0.9rem;
+	}
 }
 
 /*BOOKABLE SERVICES*/
@@ -487,6 +627,75 @@ body {
 	cursor: not-allowed;
 }
 
+@media (max-width: 768px) {
+	.bookable-carousel {
+		padding: 3rem 1.5rem;
+	}
+	.bookable-carousel h2 {
+		font-size: 1.8rem;
+	}
+	.bookable-carousel .subtitle {
+		padding: 0 1rem;
+		font-size: 1rem;
+	}
+	.carousel-wrapper {
+		padding: 1rem;
+		overflow-x: auto;
+	}
+	.carousel-track {
+		flex-wrap: nowrap;
+		width: auto;
+		gap: 1.5rem;
+	}
+	.experience-card {
+		padding: 1.5rem;
+		min-width: 320px;
+		max-width: 320px;
+		height: auto;
+		flex-shrink: 0;
+	}
+	.experience-card h3 {
+		font-size: 1.1rem;
+	}
+	.experience-card p {
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	.tag {
+		font-size: 0.8rem;
+	}
+	.card-links a {
+		padding: 0.5rem 1rem;
+		font-size: 0.95rem;
+	}
+	.carousel-button {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.bookable-carousel h2 {
+		font-size: 1.6rem;
+	}
+	.bookable-carousel .subtitle {
+		font-size: 0.95rem;
+	}
+	.experience-card {
+		padding: 1rem;
+		min-width: 280px;
+		max-width: 280px;
+	}
+	.experience-card h3 {
+		font-size: 1rem;
+	}
+	.experience-card p {
+		font-size: 0.9rem;
+	}
+	.card-links a {
+		font-size: 0.9rem;
+	}
+}
+
 /*CONTACT SECTION*/
 .contact {
 	padding: 4rem 2rem;
@@ -583,6 +792,53 @@ body {
 	font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+	.contact {
+		padding: 3rem 1.5rem;
+	}
+	.contact-container h2 {
+		font-size: 1.8rem;
+	}
+	.contact-form label {
+		font-size: 1rem;
+	}
+	.contact-form input,
+	.contact-form textarea {
+		font-size: 0.95rem;
+	}
+	.contact-form button {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.95rem;
+	}
+	.contact-social a {
+		margin: 0.5rem 0;
+		display: block;
+	}
+	.review-note {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+	}
+	.contact-note {
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-container h2 {
+		font-size: 1.6rem;
+	}
+	.contact-form input,
+	.contact-form textarea {
+		font-size: 0.9rem;
+	}
+	.contact-form button {
+		font-size: 0.9rem;
+	}
+	.contact-note {
+		font-size: 0.9rem;
+	}
+}
+
 /*FOOTER*/
 .site-footer {
 	padding: 0.5rem 2rem;
@@ -599,4 +855,25 @@ body {
 	margin-bottom: 1rem;
 	height: auto;
 	max-width: 180px;
+}
+
+@media (max-width: 768px) {
+	.site-footer {
+		padding: 2rem 1rem;
+	}
+	.footer-logo {
+		max-width: 140px;
+	}
+	.footer-copy {
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer-logo {
+		max-width: 120px;
+	}
+	.footer-copy {
+		font-size: 0.9rem;
+	}
 }
