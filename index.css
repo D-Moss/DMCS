@@ -27,6 +27,12 @@ body {
 	--card-width: 500px;
 }
 
+.disabled-link {
+	opacity: 0.6;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
 /*HERO SECTION*/
 .hero {
 	padding: 0.5rem 2rem;
@@ -572,8 +578,8 @@ body {
 
 .em-button {
 	padding: 0.55rem 0.9rem;
-	background: #0f1a2b;
-	color: #fff;
+	background: var(--color-blush);
+	color: var(--color-navy);
 	text-decoration: none;
 	font-size: 0.95rem;
 	font-weight: 600;
