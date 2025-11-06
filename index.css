@@ -261,7 +261,6 @@ body {
 	border: 1px solid #bfe8cc;
 }
 
-/* Link button */
 .pc-link {
 	padding: 0.45rem 0.7rem;
 	text-decoration: none;
@@ -767,10 +766,23 @@ body {
 
 .em-slide figcaption {
 	padding: 0.6rem 0.8rem;
-	background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+	background: linear-gradient(to top, rgba(0, 0, 0 ,0.55), rgba(0, 0, 0, 0));
 	color: #fff;
 	font-size: 0.9rem;
+	display: block;
 	align-self: end;
+}
+
+.figure,
+.figcaption {
+	padding: 0;
+	background: none;
+	color: inherit;
+	border: 0;
+}
+
+.figcaption {
+	display: none;
 }
 
 .em-cta {
