@@ -82,4 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		slider.addEventListener('mouseenter', () => clearInterval(timer));
 		slider.addEventListener('mouseleave', () => (timer = setInterval(next, intervalMs)));
 	});
+
+	/* ---------- AFFILIATE LINK TRACKING ---------- */
+	document.addEventListener('click', function (e) {
+		const a = e.target.closest('a[data-affiliate]');
+		if (!a) return;
+
+		const partner = a.getAttribute('data-affiliate');
+		const section = a.getAttribute('data-section') || 'unknown';
+		const url = a.href;
+
+		if (typeof gtag === 'function') {
+			gtag('event', 'affiliate_click', {
+				partner: partner,
+				link_url: url,
+				link_text: a.textContent.trim(),
+				location: section
+			});
+		}
+	}, { capture: true });
 });
