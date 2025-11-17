@@ -101,12 +101,6 @@ body {
 }
 
 @media (max-width: 480px) {
-	/*.hero-container {
-		max-width: 250px;
-	}
-	.logo {
-		width: 75px;
-	}*/
 	.hero h1 {
 		font-size: 1.6rem;
 	}
@@ -114,7 +108,6 @@ body {
 		font-size: 0.95rem;
 	}
 	.cta-button {
-		/*padding: 0.6rem 1.2rem;*/
 		font-size: 1rem;
 		width: 100%;
 	}
@@ -137,17 +130,6 @@ body {
 	grid-template-columns: 1.2fr 1fr;
 	gap: 50px;
 	align-items: start;
-}
-
-.ap-grid::before {
-	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
-	border-radius: 1px;
-	position: absolute;
-	top: 0;
-	left: 66.5%;
-	bottom: 0;
-	width: 2px;
-	content: "";
 }
 
 @media (max-width: 1024px) {
@@ -191,18 +173,15 @@ body {
 
 @media (max-width: 900px) {
 	.ap-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .ap-grid::before {
-    display: none;
-  }
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
 
-  /* Add a faint horizontal divider instead for mobile */
-  .about-col {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 1.5rem;
-  }
+	/* Add a faint horizontal divider instead for mobile */
+	.about-col {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		padding-bottom: 1.5rem;
+	}
 }
 
 .partners-col h3 {
@@ -388,20 +367,13 @@ body {
 	.about {
 		padding: 2rem 1px;
 	}
-	/*.about-container {
-		text-align: justify;
-		max-width: 250px;
-	}*/
 	.about-image {
 		width: 120px;
 	}
 	.about-text h2 {
-		/*text-align: center;*/
 		font-size: 1.6rem;
 	}
 	.about-text p {
-		/*margin-bottom: 1rem;
-		padding: 0 1rem;*/
 		text-align: left;
 		font-size: .95rem;
 	}
