@@ -170,41 +170,16 @@ body {
 	font-style: italic;
 }
 
-.partners-col {
-	padding: 1.5rem 1.5rem 1.75rem;
-	border-radius: 6px;
-}
-
 @media (max-width: 900px) {
 	.ap-grid {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
-
 	/* Add a faint horizontal divider instead for mobile */
 	.about-col {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		padding-bottom: 1.5rem;
 	}
-}
-
-.partners-col h3 {
-	margin: 0;
-	font-size: 1.6rem;
-}
-
-.partners-header {
-	margin-bottom: 0.25rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 0.75rem;
-}
-
-.ap-disclaimer {
-	margin: 0 0 0.75rem;
-	font-size: 0.95rem;
-	opacity: 0.9;
 }
 
 .ap-tag {
@@ -218,7 +193,14 @@ body {
 
 .partners-grid {
 	display: grid;
-	gap: 0.75rem;
+	grid-template-columns: repeat(2,minmax(0, 1fr));
+	gap: 0.75rem 1rem;
+}
+
+@media (max-width: 640px) {
+	.partners-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .partner-card {
@@ -235,25 +217,20 @@ body {
 
 .pc-left {
 	display: flex;
-	gap: 0.8rem;
-	align-items: center;
-}
-
-.logo-circle {
-	background: rgba(0, 0, 0, 0.05);
-	font-weight: 700;
-	letter-spacing: 0.5px;
-	border: 1px solid rgba(0, 0, 0, 0.18);
-	width: 42px;
-	height: 42px;
-	border-radius: 50%;
-	display: grid;
-	place-items: center;
+	gap: 0.4rem;
+	align-items: flex-start;
 }
 
 .pc-meta h4 {
 	margin: 0;
 	font-size: 1rem;
+	white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+	.pc-meta h4 {
+		white-space: normal;
+	}
 }
 
 .pc-meta small {
